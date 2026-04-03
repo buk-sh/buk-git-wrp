@@ -38,18 +38,18 @@ enum Commands {
     /// Clone a repository
     Clone {
         /// Repository URL to clone
-        url: String,
+        url: String,                           // the repository URL to clone.
         /// Path to clone into
-        path: Option<PathBuf>,
+        path: Option<PathBuf>,                 // the path to clone into, i'd say `.`.
         /// Clone as bare repository
-        #[arg(long)]
+        #[arg(long)]                           // do we clone as bare-repository?
         bare: bool,
         /// Clone only the specified branch
-        #[arg(long)]
-        branch: Option<String>,
-        /// Create a shallow clone with specified depth
-        #[arg(long)]
-        depth: Option<usize>,
+        #[arg(long)]                           // do we only clone the specified branch?
+        branch: Option<String>,                // here, we pass in that branch, if the above
+                                               // statement is true.
+        #[arg(long)]                           // do we clone shallow with the specified branch?
+        depth: Option<usize>,                  // pass in the depth; Specified as a usize.
     },
 
     /// Show working tree status
