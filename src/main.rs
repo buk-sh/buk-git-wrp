@@ -58,7 +58,7 @@ enum Commands {
         #[arg(short)]
         short: bool,
         /// Show branch information
-        #[arg(short = 'b', long)]
+        #[arg(short = 'b', long)]               // use -b for short to avoid conflict with -s. (-s is for set-upstream.)
         show_branch: bool,
         /// Show ignored files
         #[arg(long)]
