@@ -91,13 +91,13 @@ enum Commands {
     /// Restore working tree files
     Restore {
         /// Files to restore
-        paths: Vec<PathBuf>,
+        paths: Vec<PathBuf>,                    // the files to restore
         /// Restore to index (unstage)
-        #[arg(short, long)]
-        staged: bool,
+        #[arg(short, long)]                     // do we restore the index?
+        staged: bool,                           // stages; boolean
         /// Restore from specific commit/branch
-        #[arg(short, long)]
-        source: Option<String>,
+        #[arg(short, long)]                     // argument source
+        source: Option<String>,                 // restore from specific source / commit/branch.
     },
 
     /// Record changes to the repository
