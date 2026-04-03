@@ -68,24 +68,24 @@ enum Commands {
     /// Add files to the staging area
     Add {
         /// Files to add (use . for all)
-        paths: Vec<PathBuf>,
+        paths: Vec<PathBuf>,                    // the path to add
         /// Stage all modified and deleted files
-        #[arg(short, long)]
-        all: bool,
+        #[arg(short, long)]                     // do we stage all?
+        all: bool,                              // all; boolean
         /// Interactively choose hunks
-        #[arg(short, long)]
-        patch: bool,
+        #[arg(short, long)]                     // do we choose hunks?  
+        patch: bool,                            // no idea. yet. TODO: Check it out.
     },
 
     /// Remove files from working tree and index
     Rm {
         /// Files to remove
-        paths: Vec<PathBuf>,
+        paths: Vec<PathBuf>,                    // the path to remove
         /// Only remove from index
-        #[arg(long)]
-        cached: bool,
-        #[arg(short, long)]
-        recursive: bool,
+        #[arg(long)]                            // only remvove from index?
+        cached: bool,                           // do we remove cached?
+        #[arg(short, long)]                     // recursive argument
+        recursive: bool,                        // recusive; true or false
     },
 
     /// Restore working tree files
