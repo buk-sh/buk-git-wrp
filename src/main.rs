@@ -9,6 +9,8 @@ use git_wrapper::{
     Repository, StashOptions, StatusOptions, TagOptions,
 };
 
+// cargo install --path . --bin gitw
+
 #[derive(Parser)]
 #[command(name = "gitw")]
 #[command(about = "A Git CLI wrapper written in Rust")]
