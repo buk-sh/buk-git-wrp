@@ -59,10 +59,10 @@ enum Commands {
         short: bool,
         /// Show branch information
         #[arg(short = 'b', long)]               // use -b for short to avoid conflict with -s. (-s is for set-upstream.)
-        show_branch: bool,
+        show_branch: bool,                      // show branch boolean. Do we show it or not? 
         /// Show ignored files
         #[arg(long)]
-        ignored: bool,
+        ignored: bool,                          // do we show ignored files?
     },
 
     /// Add files to the staging area
