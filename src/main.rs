@@ -55,13 +55,13 @@ enum Commands {
     /// Show working tree status
     Status {
         /// Show short format
-        #[arg(short)]
-        short: bool,
+        #[arg(short)]                           // show short-format
+        short: bool,                            // do we use the short format?
         /// Show branch information
         #[arg(short = 'b', long)]               // use -b for short to avoid conflict with -s. (-s is for set-upstream.)
         show_branch: bool,                      // show branch boolean. Do we show it or not? 
         /// Show ignored files
-        #[arg(long)]
+        #[arg(long)]                            // CLI argument
         ignored: bool,                          // do we show ignored files?
     },
 
