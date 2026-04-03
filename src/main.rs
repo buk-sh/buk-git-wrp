@@ -823,11 +823,12 @@ fn cmd_commit(
     };
 
     let hash = repo.commit(options)?;
+    let short_hash = &hash[..8.min(hash.len())];
     
     if amend {
-        println!("{} Amended commit {}", "✓".green(), hash[..8].cyan());
+        println!("{} Amended commit {}", "✓".green(), short_hash.cyan());
     } else {
-        println!("{} Created commit {}", "✓".green(), hash[..8].cyan());
+        println!("{} Created commit {}", "✓".green(), short_hash.cyan());
     }
     
     Ok(())
